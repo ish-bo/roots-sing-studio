@@ -264,7 +264,7 @@ function Method() {
           >
             <div className="font-serif text-6xl text-[var(--primary)]/90 leading-none">{p.pct}</div>
             <h3 className="mt-6 text-2xl">{p.title}</h3>
-            <p className="mt-3 text-[var(--ink)]/75 leading-relaxed">{p.body}</p>
+            <p className="mt-3 text-lg text-[var(--ink)]/80 leading-relaxed">{p.body}</p>
           </div>
         ))}
       </div>
@@ -324,7 +324,7 @@ function Journey() {
             <div className="ml-12 md:ml-0 rounded-3xl border border-[var(--border)] bg-[var(--cream)] p-7 shadow-sm">
               <p className="eyebrow">{m.n} · {m.weeks}</p>
               <h3 className="mt-3 text-3xl">{m.title}</h3>
-              <p className="mt-3 text-[var(--ink)]/75 leading-relaxed">{m.body}</p>
+              <p className="mt-3 text-lg text-[var(--ink)]/80 leading-relaxed">{m.body}</p>
               <p className="mt-5 font-serif italic text-[var(--primary)]">{m.outcome}</p>
             </div>
           </li>
@@ -352,7 +352,7 @@ function Differentiators() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6" /></svg>
             </div>
             <h3 className="mt-5 text-xl">{i.t}</h3>
-            <p className="mt-2 text-[var(--ink)]/75">{i.b}</p>
+            <p className="mt-2 text-base text-[var(--ink)]/80">{i.b}</p>
           </div>
         ))}
       </div>
@@ -479,7 +479,7 @@ function Faq() {
               <span className="font-serif text-xl text-[var(--ink)]">{x.q}</span>
               <span className="text-[var(--primary)] text-2xl group-open:rotate-45 transition">+</span>
             </summary>
-            <p className="mt-4 text-[var(--ink)]/75 leading-relaxed">{x.a}</p>
+            <p className="mt-4 text-lg text-[var(--ink)]/80 leading-relaxed">{x.a}</p>
           </details>
         ))}
       </div>
