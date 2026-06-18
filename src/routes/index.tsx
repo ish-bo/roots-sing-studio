@@ -45,14 +45,22 @@ function Section({
   title?: string;
   intro?: string;
   children: React.ReactNode;
-  tone?: "ivory" | "sage" | "ink";
+  tone?: "ivory" | "sage" | "ink" | "blush" | "lavender" | "peach" | "mint";
 }) {
   const bg =
     tone === "sage"
-      ? "bg-[color-mix(in_oklab,var(--sage)_55%,var(--background))]"
+      ? "bg-[color-mix(in_oklab,var(--sage)_60%,var(--background))]"
       : tone === "ink"
         ? "bg-[var(--ink)] text-[var(--cream)]"
-        : "";
+        : tone === "blush"
+          ? "bg-[color-mix(in_oklab,var(--blush)_55%,var(--background))]"
+          : tone === "lavender"
+            ? "bg-[color-mix(in_oklab,var(--lavender)_55%,var(--background))]"
+            : tone === "peach"
+              ? "bg-[color-mix(in_oklab,var(--peach)_55%,var(--background))]"
+              : tone === "mint"
+                ? "bg-[color-mix(in_oklab,var(--mint)_55%,var(--background))]"
+                : "";
   return (
     <section id={id} className={`relative py-24 md:py-32 ${bg}`}>
       <div className="container-narrow">
@@ -60,12 +68,12 @@ function Section({
           <div className="mx-auto max-w-2xl text-center">
             {eyebrow && <p className="eyebrow mb-5">{eyebrow}</p>}
             {title && (
-              <h2 className="text-4xl md:text-5xl leading-[1.1] font-serif">
+              <h2 className="text-5xl md:text-6xl leading-[1.05] font-serif font-bold">
                 {title}
               </h2>
             )}
             {intro && (
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-6 text-xl md:text-2xl text-[var(--ink)]/85 leading-relaxed font-normal">
                 {intro}
               </p>
             )}
