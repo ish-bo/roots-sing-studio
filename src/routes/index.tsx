@@ -150,11 +150,11 @@ function Hero() {
       <div className="container-narrow grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 animate-fade-up">
           <p className="eyebrow mb-6">An adult-first Indian music journey</p>
-          <h1 className="text-5xl md:text-7xl leading-[1.02] font-serif tracking-tight">
+          <h1 className="text-6xl md:text-8xl leading-[1.02] font-serif font-bold tracking-tight text-[var(--ink)]">
             It's never too late
-            <span className="block italic text-[var(--primary)]">to sing your roots.</span>
+            <span className="block italic font-bold text-[var(--primary)]">to sing your roots.</span>
           </h1>
-          <p className="mt-7 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+          <p className="mt-7 text-xl md:text-2xl text-[var(--ink)]/85 max-w-xl leading-relaxed font-normal">
             A 16-week program for busy NRI adults to sing Bollywood,
             devotional, and classical songs with confidence — guided by
             personalized feedback and a warm global community.
@@ -162,16 +162,16 @@ function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-[var(--cream)] hover:bg-[var(--ink)] transition shadow-[0_8px_24px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)]"
+              className="inline-flex items-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-base font-semibold text-[var(--cream)] hover:bg-[var(--ink)] transition shadow-[0_8px_24px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)]"
             >
               Join the founding cohort
             </a>
-            <a href="#program" className="inline-flex items-center gap-2 px-3 py-2 text-[var(--ink)] hover:text-[var(--primary)] transition">
-              <span className="border-b border-[var(--gold)]/60">Explore the program</span>
+            <a href="#program" className="inline-flex items-center gap-2 px-3 py-2 text-base font-semibold text-[var(--ink)] hover:text-[var(--primary)] transition">
+              <span className="border-b-2 border-[var(--gold)]/70">Explore the program</span>
               <span>→</span>
             </a>
           </div>
-          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-base text-[var(--ink)]/80 font-medium">
             <Stat n="16" l="weeks" />
             <span className="opacity-30">•</span>
             <Stat n="15 min" l="daily riyaz" />
@@ -182,19 +182,20 @@ function Hero() {
 
         <div className="md:col-span-5 relative">
           <div className="relative animate-float">
-            <div className="absolute -inset-6 rounded-[2rem] bg-[color-mix(in_oklab,var(--sage)_60%,transparent)] blur-2xl opacity-70" />
+            <div className="absolute -inset-6 rounded-[2rem] bg-[color-mix(in_oklab,var(--blush)_60%,transparent)] blur-2xl opacity-80" />
+            <div className="absolute -inset-10 rounded-[2.5rem] bg-[color-mix(in_oklab,var(--lavender)_50%,transparent)] blur-3xl opacity-60" />
             <div className="relative overflow-hidden rounded-[2rem] border border-[var(--gold)]/30 bg-[var(--cream)] shadow-[0_30px_80px_-30px_color-mix(in_oklab,var(--primary)_40%,transparent)]">
               <img
                 src={heroImg}
-                alt="A woman singing classical Indian music with a tanpura"
-                width={1536}
-                height={1536}
+                alt="A South Asian man singing into a vintage microphone with lotus motifs"
+                width={1280}
+                height={1280}
                 className="w-full h-auto"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-[var(--background)]/90 backdrop-blur border border-[var(--border)] px-5 py-4 shadow-lg">
-              <p className="text-xs uppercase tracking-widest text-muted-foreground">Now enrolling</p>
-              <p className="font-serif text-lg">Cohort 01 · 25 seats</p>
+            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-[var(--background)]/95 backdrop-blur border border-[var(--border)] px-5 py-4 shadow-lg">
+              <p className="text-xs uppercase tracking-widest text-[var(--ink)]/70 font-semibold">Now enrolling</p>
+              <p className="font-serif text-xl font-bold text-[var(--ink)]">Cohort 01 · 25 seats</p>
             </div>
           </div>
         </div>
