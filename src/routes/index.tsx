@@ -416,7 +416,7 @@ function Pricing() {
               <span className="font-serif text-5xl">{t.price}</span>
               <span className={`text-sm ${t.featured ? "text-[var(--cream)]/70" : "text-[var(--ink)]/75"}`}>{t.sub}</span>
             </div>
-            <ul className={`mt-7 space-y-3 text-sm ${t.featured ? "text-[var(--cream)]/85" : "text-[var(--ink)]/75"}`}>
+            <ul className={`mt-7 space-y-3 text-base ${t.featured ? "text-[var(--cream)]/90" : "text-[var(--ink)]/80"}`}>
               {t.bullets.map((b) => (
                 <li key={b} className="flex gap-3">
                   <span className={t.featured ? "text-[var(--gold)]" : "text-[var(--primary)]"}>♪</span>
@@ -493,7 +493,7 @@ function Footer() {
       <div className="container-narrow grid md:grid-cols-3 gap-8 items-start">
         <div>
           <p className="font-serif text-2xl">Roots Through Music<sup className="text-xs">™</sup></p>
-          <p className="mt-3 text-sm text-[var(--ink)]/75 max-w-xs">
+          <p className="mt-3 text-base text-[var(--ink)]/80 max-w-xs">
             Sing. Connect. Belong. A cultural-wellness program for NRI adults.
           </p>
         </div>
