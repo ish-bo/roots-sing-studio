@@ -45,14 +45,22 @@ function Section({
   title?: string;
   intro?: string;
   children: React.ReactNode;
-  tone?: "ivory" | "sage" | "ink";
+  tone?: "ivory" | "sage" | "ink" | "blush" | "lavender" | "peach" | "mint";
 }) {
   const bg =
     tone === "sage"
-      ? "bg-[color-mix(in_oklab,var(--sage)_55%,var(--background))]"
+      ? "bg-[color-mix(in_oklab,var(--sage)_60%,var(--background))]"
       : tone === "ink"
         ? "bg-[var(--ink)] text-[var(--cream)]"
-        : "";
+        : tone === "blush"
+          ? "bg-[color-mix(in_oklab,var(--blush)_55%,var(--background))]"
+          : tone === "lavender"
+            ? "bg-[color-mix(in_oklab,var(--lavender)_55%,var(--background))]"
+            : tone === "peach"
+              ? "bg-[color-mix(in_oklab,var(--peach)_55%,var(--background))]"
+              : tone === "mint"
+                ? "bg-[color-mix(in_oklab,var(--mint)_55%,var(--background))]"
+                : "";
   return (
     <section id={id} className={`relative py-24 md:py-32 ${bg}`}>
       <div className="container-narrow">
@@ -60,12 +68,12 @@ function Section({
           <div className="mx-auto max-w-2xl text-center">
             {eyebrow && <p className="eyebrow mb-5">{eyebrow}</p>}
             {title && (
-              <h2 className="text-4xl md:text-5xl leading-[1.1] font-serif">
+              <h2 className="text-5xl md:text-6xl leading-[1.05] font-serif font-bold">
                 {title}
               </h2>
             )}
             {intro && (
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-6 text-xl md:text-2xl text-[var(--ink)]/85 leading-relaxed font-normal">
                 {intro}
               </p>
             )}
@@ -116,7 +124,7 @@ function Nav() {
           </span>
           <span className="font-serif text-xl tracking-tight">
             Roots Through Music
-            <sup className="text-[10px] text-muted-foreground"> ™</sup>
+            <sup className="text-[10px] text-[var(--ink)]/75"> ™</sup>
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm">
@@ -142,11 +150,11 @@ function Hero() {
       <div className="container-narrow grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 animate-fade-up">
           <p className="eyebrow mb-6">An adult-first Indian music journey</p>
-          <h1 className="text-5xl md:text-7xl leading-[1.02] font-serif tracking-tight">
+          <h1 className="text-6xl md:text-8xl leading-[1.02] font-serif font-bold tracking-tight text-[var(--ink)]">
             It's never too late
-            <span className="block italic text-[var(--primary)]">to sing your roots.</span>
+            <span className="block italic font-bold text-[var(--primary)]">to sing your roots.</span>
           </h1>
-          <p className="mt-7 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+          <p className="mt-7 text-xl md:text-2xl text-[var(--ink)]/85 max-w-xl leading-relaxed font-normal">
             A 16-week program for busy NRI adults to sing Bollywood,
             devotional, and classical songs with confidence — guided by
             personalized feedback and a warm global community.
@@ -154,16 +162,16 @@ function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-[var(--cream)] hover:bg-[var(--ink)] transition shadow-[0_8px_24px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)]"
+              className="inline-flex items-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-base font-semibold text-[var(--cream)] hover:bg-[var(--ink)] transition shadow-[0_8px_24px_-12px_color-mix(in_oklab,var(--primary)_60%,transparent)]"
             >
               Join the founding cohort
             </a>
-            <a href="#program" className="inline-flex items-center gap-2 px-3 py-2 text-[var(--ink)] hover:text-[var(--primary)] transition">
-              <span className="border-b border-[var(--gold)]/60">Explore the program</span>
+            <a href="#program" className="inline-flex items-center gap-2 px-3 py-2 text-base font-semibold text-[var(--ink)] hover:text-[var(--primary)] transition">
+              <span className="border-b-2 border-[var(--gold)]/70">Explore the program</span>
               <span>→</span>
             </a>
           </div>
-          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-base text-[var(--ink)]/80 font-medium">
             <Stat n="16" l="weeks" />
             <span className="opacity-30">•</span>
             <Stat n="15 min" l="daily riyaz" />
@@ -174,19 +182,20 @@ function Hero() {
 
         <div className="md:col-span-5 relative">
           <div className="relative animate-float">
-            <div className="absolute -inset-6 rounded-[2rem] bg-[color-mix(in_oklab,var(--sage)_60%,transparent)] blur-2xl opacity-70" />
+            <div className="absolute -inset-6 rounded-[2rem] bg-[color-mix(in_oklab,var(--blush)_60%,transparent)] blur-2xl opacity-80" />
+            <div className="absolute -inset-10 rounded-[2.5rem] bg-[color-mix(in_oklab,var(--lavender)_50%,transparent)] blur-3xl opacity-60" />
             <div className="relative overflow-hidden rounded-[2rem] border border-[var(--gold)]/30 bg-[var(--cream)] shadow-[0_30px_80px_-30px_color-mix(in_oklab,var(--primary)_40%,transparent)]">
               <img
                 src={heroImg}
-                alt="A woman singing classical Indian music with a tanpura"
-                width={1536}
-                height={1536}
+                alt="A South Asian man singing into a vintage microphone with lotus motifs"
+                width={1280}
+                height={1280}
                 className="w-full h-auto"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-[var(--background)]/90 backdrop-blur border border-[var(--border)] px-5 py-4 shadow-lg">
-              <p className="text-xs uppercase tracking-widest text-muted-foreground">Now enrolling</p>
-              <p className="font-serif text-lg">Cohort 01 · 25 seats</p>
+            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-[var(--background)]/95 backdrop-blur border border-[var(--border)] px-5 py-4 shadow-lg">
+              <p className="text-xs uppercase tracking-widest text-[var(--ink)]/70 font-semibold">Now enrolling</p>
+              <p className="font-serif text-xl font-bold text-[var(--ink)]">Cohort 01 · 25 seats</p>
             </div>
           </div>
         </div>
@@ -215,7 +224,7 @@ function Problem() {
   ];
   return (
     <Section
-      tone="sage"
+      tone="blush"
       eyebrow="The quiet ache"
       title="You're not alone in wanting this."
       intro="Thousands of NRI adults grew up loving Indian music but never had the chance to learn. We built Roots Through Music for exactly that person."
@@ -255,7 +264,7 @@ function Method() {
           >
             <div className="font-serif text-6xl text-[var(--primary)]/90 leading-none">{p.pct}</div>
             <h3 className="mt-6 text-2xl">{p.title}</h3>
-            <p className="mt-3 text-muted-foreground leading-relaxed">{p.body}</p>
+            <p className="mt-3 text-lg text-[var(--ink)]/80 leading-relaxed">{p.body}</p>
           </div>
         ))}
       </div>
@@ -315,7 +324,7 @@ function Journey() {
             <div className="ml-12 md:ml-0 rounded-3xl border border-[var(--border)] bg-[var(--cream)] p-7 shadow-sm">
               <p className="eyebrow">{m.n} · {m.weeks}</p>
               <h3 className="mt-3 text-3xl">{m.title}</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed">{m.body}</p>
+              <p className="mt-3 text-lg text-[var(--ink)]/80 leading-relaxed">{m.body}</p>
               <p className="mt-5 font-serif italic text-[var(--primary)]">{m.outcome}</p>
             </div>
           </li>
@@ -335,7 +344,7 @@ function Differentiators() {
     { t: "Global mehfil", b: "Monthly themed sing-alongs from Kishore Kumar nights to devotional evenings." },
   ];
   return (
-    <Section tone="sage" eyebrow="Why it works" title="A program shaped around your real life.">
+    <Section tone="lavender" eyebrow="Why it works" title="A program shaped around your real life.">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((i) => (
           <div key={i.t} className="rounded-2xl bg-[var(--background)]/70 backdrop-blur border border-[var(--border)] p-7">
@@ -343,7 +352,7 @@ function Differentiators() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6" /></svg>
             </div>
             <h3 className="mt-5 text-xl">{i.t}</h3>
-            <p className="mt-2 text-muted-foreground">{i.b}</p>
+            <p className="mt-2 text-base text-[var(--ink)]/80">{i.b}</p>
           </div>
         ))}
       </div>
@@ -401,13 +410,13 @@ function Pricing() {
                 Most loved
               </span>
             )}
-            <p className={`text-xs uppercase tracking-[0.3em] ${t.featured ? "text-[var(--gold)]" : "text-muted-foreground"}`}>{t.tag}</p>
+            <p className={`text-xs uppercase tracking-[0.3em] ${t.featured ? "text-[var(--gold)]" : "text-[var(--ink)]/75"}`}>{t.tag}</p>
             <h3 className={`mt-4 text-3xl ${t.featured ? "text-[var(--cream)]" : ""}`}>{t.name}</h3>
             <div className="mt-6 flex items-baseline gap-2">
               <span className="font-serif text-5xl">{t.price}</span>
-              <span className={`text-sm ${t.featured ? "text-[var(--cream)]/70" : "text-muted-foreground"}`}>{t.sub}</span>
+              <span className={`text-sm ${t.featured ? "text-[var(--cream)]/70" : "text-[var(--ink)]/75"}`}>{t.sub}</span>
             </div>
-            <ul className={`mt-7 space-y-3 text-sm ${t.featured ? "text-[var(--cream)]/85" : "text-muted-foreground"}`}>
+            <ul className={`mt-7 space-y-3 text-base ${t.featured ? "text-[var(--cream)]/90" : "text-[var(--ink)]/80"}`}>
               {t.bullets.map((b) => (
                 <li key={b} className="flex gap-3">
                   <span className={t.featured ? "text-[var(--gold)]" : "text-[var(--primary)]"}>♪</span>
@@ -428,7 +437,7 @@ function Pricing() {
           </div>
         ))}
       </div>
-      <p className="mt-10 text-center text-sm text-muted-foreground">
+      <p className="mt-10 text-center text-sm text-[var(--ink)]/75">
         VIP one-on-one coaching also available at $2,499 · Corporate cultural-wellness packages from $7,500.
       </p>
     </Section>
@@ -470,7 +479,7 @@ function Faq() {
               <span className="font-serif text-xl text-[var(--ink)]">{x.q}</span>
               <span className="text-[var(--primary)] text-2xl group-open:rotate-45 transition">+</span>
             </summary>
-            <p className="mt-4 text-muted-foreground leading-relaxed">{x.a}</p>
+            <p className="mt-4 text-lg text-[var(--ink)]/80 leading-relaxed">{x.a}</p>
           </details>
         ))}
       </div>
@@ -484,7 +493,7 @@ function Footer() {
       <div className="container-narrow grid md:grid-cols-3 gap-8 items-start">
         <div>
           <p className="font-serif text-2xl">Roots Through Music<sup className="text-xs">™</sup></p>
-          <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+          <p className="mt-3 text-base text-[var(--ink)]/80 max-w-xs">
             Sing. Connect. Belong. A cultural-wellness program for NRI adults.
           </p>
         </div>
@@ -509,10 +518,10 @@ function Footer() {
               Notify me
             </button>
           </form>
-          <p className="mt-3 text-xs text-muted-foreground">No spam — just cohort openings & free mehfils.</p>
+          <p className="mt-3 text-xs text-[var(--ink)]/75">No spam — just cohort openings & free mehfils.</p>
         </div>
       </div>
-      <p className="mt-12 text-center text-xs text-muted-foreground">
+      <p className="mt-12 text-center text-xs text-[var(--ink)]/75">
         © {new Date().getFullYear()} Roots Through Music™ · Made with love for the diaspora.
       </p>
     </footer>
