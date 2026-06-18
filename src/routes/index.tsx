@@ -124,7 +124,7 @@ function Nav() {
           </span>
           <span className="font-serif text-xl tracking-tight">
             Roots Through Music
-            <sup className="text-[10px] text-muted-foreground"> ™</sup>
+            <sup className="text-[10px] text-[var(--ink)]/75"> ™</sup>
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm">
@@ -224,7 +224,7 @@ function Problem() {
   ];
   return (
     <Section
-      tone="sage"
+      tone="blush"
       eyebrow="The quiet ache"
       title="You're not alone in wanting this."
       intro="Thousands of NRI adults grew up loving Indian music but never had the chance to learn. We built Roots Through Music for exactly that person."
@@ -264,7 +264,7 @@ function Method() {
           >
             <div className="font-serif text-6xl text-[var(--primary)]/90 leading-none">{p.pct}</div>
             <h3 className="mt-6 text-2xl">{p.title}</h3>
-            <p className="mt-3 text-muted-foreground leading-relaxed">{p.body}</p>
+            <p className="mt-3 text-[var(--ink)]/75 leading-relaxed">{p.body}</p>
           </div>
         ))}
       </div>
@@ -324,7 +324,7 @@ function Journey() {
             <div className="ml-12 md:ml-0 rounded-3xl border border-[var(--border)] bg-[var(--cream)] p-7 shadow-sm">
               <p className="eyebrow">{m.n} · {m.weeks}</p>
               <h3 className="mt-3 text-3xl">{m.title}</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed">{m.body}</p>
+              <p className="mt-3 text-[var(--ink)]/75 leading-relaxed">{m.body}</p>
               <p className="mt-5 font-serif italic text-[var(--primary)]">{m.outcome}</p>
             </div>
           </li>
@@ -344,7 +344,7 @@ function Differentiators() {
     { t: "Global mehfil", b: "Monthly themed sing-alongs from Kishore Kumar nights to devotional evenings." },
   ];
   return (
-    <Section tone="sage" eyebrow="Why it works" title="A program shaped around your real life.">
+    <Section tone="lavender" eyebrow="Why it works" title="A program shaped around your real life.">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((i) => (
           <div key={i.t} className="rounded-2xl bg-[var(--background)]/70 backdrop-blur border border-[var(--border)] p-7">
@@ -352,7 +352,7 @@ function Differentiators() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6" /></svg>
             </div>
             <h3 className="mt-5 text-xl">{i.t}</h3>
-            <p className="mt-2 text-muted-foreground">{i.b}</p>
+            <p className="mt-2 text-[var(--ink)]/75">{i.b}</p>
           </div>
         ))}
       </div>
@@ -410,13 +410,13 @@ function Pricing() {
                 Most loved
               </span>
             )}
-            <p className={`text-xs uppercase tracking-[0.3em] ${t.featured ? "text-[var(--gold)]" : "text-muted-foreground"}`}>{t.tag}</p>
+            <p className={`text-xs uppercase tracking-[0.3em] ${t.featured ? "text-[var(--gold)]" : "text-[var(--ink)]/75"}`}>{t.tag}</p>
             <h3 className={`mt-4 text-3xl ${t.featured ? "text-[var(--cream)]" : ""}`}>{t.name}</h3>
             <div className="mt-6 flex items-baseline gap-2">
               <span className="font-serif text-5xl">{t.price}</span>
-              <span className={`text-sm ${t.featured ? "text-[var(--cream)]/70" : "text-muted-foreground"}`}>{t.sub}</span>
+              <span className={`text-sm ${t.featured ? "text-[var(--cream)]/70" : "text-[var(--ink)]/75"}`}>{t.sub}</span>
             </div>
-            <ul className={`mt-7 space-y-3 text-sm ${t.featured ? "text-[var(--cream)]/85" : "text-muted-foreground"}`}>
+            <ul className={`mt-7 space-y-3 text-sm ${t.featured ? "text-[var(--cream)]/85" : "text-[var(--ink)]/75"}`}>
               {t.bullets.map((b) => (
                 <li key={b} className="flex gap-3">
                   <span className={t.featured ? "text-[var(--gold)]" : "text-[var(--primary)]"}>♪</span>
@@ -437,7 +437,7 @@ function Pricing() {
           </div>
         ))}
       </div>
-      <p className="mt-10 text-center text-sm text-muted-foreground">
+      <p className="mt-10 text-center text-sm text-[var(--ink)]/75">
         VIP one-on-one coaching also available at $2,499 · Corporate cultural-wellness packages from $7,500.
       </p>
     </Section>
@@ -479,7 +479,7 @@ function Faq() {
               <span className="font-serif text-xl text-[var(--ink)]">{x.q}</span>
               <span className="text-[var(--primary)] text-2xl group-open:rotate-45 transition">+</span>
             </summary>
-            <p className="mt-4 text-muted-foreground leading-relaxed">{x.a}</p>
+            <p className="mt-4 text-[var(--ink)]/75 leading-relaxed">{x.a}</p>
           </details>
         ))}
       </div>
@@ -493,7 +493,7 @@ function Footer() {
       <div className="container-narrow grid md:grid-cols-3 gap-8 items-start">
         <div>
           <p className="font-serif text-2xl">Roots Through Music<sup className="text-xs">™</sup></p>
-          <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+          <p className="mt-3 text-sm text-[var(--ink)]/75 max-w-xs">
             Sing. Connect. Belong. A cultural-wellness program for NRI adults.
           </p>
         </div>
@@ -518,10 +518,10 @@ function Footer() {
               Notify me
             </button>
           </form>
-          <p className="mt-3 text-xs text-muted-foreground">No spam — just cohort openings & free mehfils.</p>
+          <p className="mt-3 text-xs text-[var(--ink)]/75">No spam — just cohort openings & free mehfils.</p>
         </div>
       </div>
-      <p className="mt-12 text-center text-xs text-muted-foreground">
+      <p className="mt-12 text-center text-xs text-[var(--ink)]/75">
         © {new Date().getFullYear()} Roots Through Music™ · Made with love for the diaspora.
       </p>
     </footer>
