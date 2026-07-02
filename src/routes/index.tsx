@@ -100,6 +100,7 @@ function Landing() {
       <Journey />
       <Differentiators />
       <Pricing />
+      <Booking />
       <Testimonial />
       <Faq />
       <Footer />
@@ -111,9 +112,9 @@ function Nav() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <div className="container-narrow flex items-center justify-between py-6">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-[var(--gold)]/50 text-[var(--primary)]">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <a href="#top" className="flex items-center gap-3">
+          <span className="grid h-14 w-14 place-items-center rounded-full border border-[var(--gold)]/50 text-[var(--primary)]">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
               <path
                 d="M12 2C8 6 8 10 12 14C16 18 16 22 12 22M6 8C8 10 8 14 6 16M18 8C16 10 16 14 18 16"
                 stroke="currentColor"
@@ -122,9 +123,9 @@ function Nav() {
               />
             </svg>
           </span>
-          <span className="font-serif text-xl tracking-tight">
+          <span className="font-serif text-2xl md:text-3xl tracking-tight font-bold">
             Roots Through Music
-            <sup className="text-[10px] text-[var(--ink)]/75"> ™</sup>
+            <sup className="text-[11px] text-[var(--ink)]/75"> ™</sup>
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm">
@@ -132,6 +133,7 @@ function Nav() {
           <a href="#journey" className="hover:text-primary transition">Journey</a>
           <a href="#pricing" className="hover:text-primary transition">Pricing</a>
           <a href="#faq" className="hover:text-primary transition">FAQ</a>
+          <a href="#booking" className="hover:text-primary transition">Book</a>
         </nav>
         <a
           href="#pricing"
@@ -440,6 +442,49 @@ function Pricing() {
       <p className="mt-10 text-center text-sm text-[var(--ink)]/75">
         VIP one-on-one coaching also available at $2,499 · Corporate cultural-wellness packages from $7,500.
       </p>
+    </Section>
+  );
+}
+
+function Booking() {
+  return (
+    <Section
+      id="booking"
+      tone="peach"
+      eyebrow="Book Priya"
+      title="Bring live Indian music to your celebration."
+      intro="Private parties, cultural evenings, corporate mehfils, weddings, and intimate house concerts — hosted and sung by Priya. Classical, devotional, ghazals, and Bollywood favorites, curated for your event."
+    >
+      <div className="mx-auto max-w-3xl grid md:grid-cols-2 gap-6">
+        <a
+          href="tel:+14258987256"
+          className="group rounded-3xl bg-[var(--cream)] border border-[var(--gold)]/40 p-8 hover:border-[var(--gold)] transition shadow-sm"
+        >
+          <p className="eyebrow">Call or text</p>
+          <p className="mt-4 font-serif text-3xl md:text-4xl text-[var(--ink)] group-hover:text-[var(--primary)] transition">
+            (425) 898-7256
+          </p>
+          <p className="mt-3 text-base text-[var(--ink)]/75">Tap to call · available for bookings across the US and virtually worldwide.</p>
+        </a>
+        <a
+          href="mailto:priyadharma@hotmail.com?subject=Booking%20inquiry%20—%20Roots%20Through%20Music"
+          className="group rounded-3xl bg-[var(--cream)] border border-[var(--gold)]/40 p-8 hover:border-[var(--gold)] transition shadow-sm"
+        >
+          <p className="eyebrow">Email</p>
+          <p className="mt-4 font-serif text-2xl md:text-3xl text-[var(--ink)] group-hover:text-[var(--primary)] transition break-all">
+            priyadharma@hotmail.com
+          </p>
+          <p className="mt-3 text-base text-[var(--ink)]/75">Share your date, venue, and vibe — I'll reply within 24 hours.</p>
+        </a>
+      </div>
+      <div className="mt-10 text-center">
+        <a
+          href="mailto:priyadharma@hotmail.com?subject=Booking%20inquiry%20—%20Roots%20Through%20Music"
+          className="inline-flex items-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-base font-semibold text-[var(--cream)] hover:bg-[var(--ink)] transition"
+        >
+          Request a booking →
+        </a>
+      </div>
     </Section>
   );
 }
