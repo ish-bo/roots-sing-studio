@@ -133,6 +133,7 @@ function Nav() {
           <a href="#journey" className="hover:text-primary transition">Journey</a>
           <a href="#pricing" className="hover:text-primary transition">Pricing</a>
           <a href="#faq" className="hover:text-primary transition">FAQ</a>
+          <a href="#booking" className="hover:text-primary transition">Book</a>
         </nav>
         <a
           href="#pricing"
