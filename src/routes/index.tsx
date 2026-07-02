@@ -189,7 +189,7 @@ function Hero() {
             <div className="relative overflow-hidden rounded-[2rem] border border-[var(--gold)]/30 bg-[var(--cream)] shadow-[0_30px_80px_-30px_color-mix(in_oklab,var(--primary)_40%,transparent)]">
               <img
                 src={heroImg}
-                alt="A South Asian man singing into a vintage microphone with lotus motifs"
+                alt="A South Asian man and woman singing a duet into a vintage microphone with lotus motifs"
                 width={1280}
                 height={1280}
                 className="w-full h-auto"
