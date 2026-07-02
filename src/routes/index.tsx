@@ -100,6 +100,7 @@ function Landing() {
       <Journey />
       <Differentiators />
       <Pricing />
+      <Booking />
       <Testimonial />
       <Faq />
       <Footer />
