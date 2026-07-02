@@ -128,18 +128,6 @@ function Nav() {
             <sup className="text-[11px] text-[var(--ink)]/75"> ™</sup>
           </span>
         </a>
-                d="M12 2C8 6 8 10 12 14C16 18 16 22 12 22M6 8C8 10 8 14 6 16M18 8C16 10 16 14 18 16"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
-          <span className="font-serif text-xl tracking-tight">
-            Roots Through Music
-            <sup className="text-[10px] text-[var(--ink)]/75"> ™</sup>
-          </span>
-        </a>
         <nav className="hidden md:flex items-center gap-9 text-sm">
           <a href="#program" className="hover:text-primary transition">Program</a>
           <a href="#journey" className="hover:text-primary transition">Journey</a>
