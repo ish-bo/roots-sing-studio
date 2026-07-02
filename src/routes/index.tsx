@@ -446,6 +446,49 @@ function Pricing() {
   );
 }
 
+function Booking() {
+  return (
+    <Section
+      id="booking"
+      tone="peach"
+      eyebrow="Book Priya"
+      title="Bring live Indian music to your celebration."
+      intro="Private parties, cultural evenings, corporate mehfils, weddings, and intimate house concerts — hosted and sung by Priya. Classical, devotional, ghazals, and Bollywood favorites, curated for your event."
+    >
+      <div className="mx-auto max-w-3xl grid md:grid-cols-2 gap-6">
+        <a
+          href="tel:+14258987256"
+          className="group rounded-3xl bg-[var(--cream)] border border-[var(--gold)]/40 p-8 hover:border-[var(--gold)] transition shadow-sm"
+        >
+          <p className="eyebrow">Call or text</p>
+          <p className="mt-4 font-serif text-3xl md:text-4xl text-[var(--ink)] group-hover:text-[var(--primary)] transition">
+            (425) 898-7256
+          </p>
+          <p className="mt-3 text-base text-[var(--ink)]/75">Tap to call · available for bookings across the US and virtually worldwide.</p>
+        </a>
+        <a
+          href="mailto:priyadharma@hotmail.com?subject=Booking%20inquiry%20—%20Roots%20Through%20Music"
+          className="group rounded-3xl bg-[var(--cream)] border border-[var(--gold)]/40 p-8 hover:border-[var(--gold)] transition shadow-sm"
+        >
+          <p className="eyebrow">Email</p>
+          <p className="mt-4 font-serif text-2xl md:text-3xl text-[var(--ink)] group-hover:text-[var(--primary)] transition break-all">
+            priyadharma@hotmail.com
+          </p>
+          <p className="mt-3 text-base text-[var(--ink)]/75">Share your date, venue, and vibe — I'll reply within 24 hours.</p>
+        </a>
+      </div>
+      <div className="mt-10 text-center">
+        <a
+          href="mailto:priyadharma@hotmail.com?subject=Booking%20inquiry%20—%20Roots%20Through%20Music"
+          className="inline-flex items-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-base font-semibold text-[var(--cream)] hover:bg-[var(--ink)] transition"
+        >
+          Request a booking →
+        </a>
+      </div>
+    </Section>
+  );
+}
+
 function Testimonial() {
   return (
     <Section tone="ink">
