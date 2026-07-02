@@ -112,10 +112,22 @@ function Nav() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <div className="container-narrow flex items-center justify-between py-6">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-[var(--gold)]/50 text-[var(--primary)]">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <a href="#top" className="flex items-center gap-3">
+          <span className="grid h-14 w-14 place-items-center rounded-full border border-[var(--gold)]/50 text-[var(--primary)]">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
               <path
+                d="M12 2C8 6 8 10 12 14C16 18 16 22 12 22M6 8C8 10 8 14 6 16M18 8C16 10 16 14 18 16"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          <span className="font-serif text-2xl md:text-3xl tracking-tight font-bold">
+            Roots Through Music
+            <sup className="text-[11px] text-[var(--ink)]/75"> ™</sup>
+          </span>
+        </a>
                 d="M12 2C8 6 8 10 12 14C16 18 16 22 12 22M6 8C8 10 8 14 6 16M18 8C16 10 16 14 18 16"
                 stroke="currentColor"
                 strokeWidth="1.5"
